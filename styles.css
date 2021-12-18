@@ -6,6 +6,8 @@
     border: 1px solid red;
 }
 
+/* HEADER */
+
 body {
     background-color: rgb(63, 64, 63);
     font-family: 'PT Sans', sans-serif;
@@ -49,6 +51,8 @@ body {
     width: 100%;
 }
 
+/* HEADER MOBILE */
+
 @media only screen and (max-width: 480px){
 
     #headerbar, span {
@@ -59,5 +63,26 @@ body {
 
     .navbar {
         display: none;
+    }
+}
+
+/* MISION */
+
+#mision {
+    position: relative;
+    top: 63px;
+    background-color: rgba(206, 208, 206, 0.2);
+    text-align: center;
+    padding: 50px;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+}
+
+/* MOBILE MISION */
+
+@media only screen and (max-width: 480px) {
+    #mision{
+        display: absolute;
+        top: 0;
     }
 }
