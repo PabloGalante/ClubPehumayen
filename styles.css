@@ -2,8 +2,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: rgb(230, 232, 230);
+    border: 1px solid red;
 }
 
 body {
     background-color: rgb(63, 64, 63);
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+#headerbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template: "one two";
+    align-content: center;
+    padding: 15px;
+    box-shadow: 1px 1px 1px rgb(230, 232, 230);
+}
+
+#headerbar span{
+    font-size: 1.5rem;
+    grid-area: one;
+    justify-content: left;
+    align-content: left;
+    font-weight: 700;
+}
+
+.navbar {
+    grid-area: two;
+    padding-top: 0.18rem;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: rgb(230, 232, 230);
+}
+
+.navbar ul {
+    display: inline-flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px){
+
+    #headerbar, span {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar {
+        display: none;
+    }
 }
