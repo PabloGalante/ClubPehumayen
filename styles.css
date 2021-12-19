@@ -24,6 +24,7 @@ body {
     padding: 15px;
     box-shadow: 1px 1px 1px rgb(230, 232, 230);
     z-index: 100;
+    background-color: rgba(63, 64, 63, 0.5);
 }
 
 #headerbar span{
@@ -107,27 +108,63 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 300px;
     gap: 1rem;
-  }
-  
-  .galeria img {
+}
+
+.galeria img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .img-grid-col-2 {
+}
+
+.img-grid-col-2 {
     grid-column: span 2;
-  }
-  
-  .img-grid-row-2 {
+}
+
+.img-grid-row-2 {
     grid-row: span 2;
-  }
+}
 
-  /* TABLET GALERIA */
+/* TABLET & PHONE GALERIA */
 
-  @media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px){
       .galeria {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 200px;
-      }
-  }
+      };
+}
+
+/* UBICACION */
+
+#ubicacion{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+#ubicacion h3{
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 1rem;
+    background-color: #475841;
+    border-radius: 3%;
+    padding: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+#map {
+    justify-content: right;
+    padding: 0.6rem;
+}
+
+/* UBICACION PHONE */
+
+@media only screen and (max-width: 480px){
+    #ubicacion{
+    display: block;
+    }
+
+    #map{
+        width: 100%;
+    }
+}
